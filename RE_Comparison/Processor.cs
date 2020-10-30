@@ -10,9 +10,9 @@ namespace RE_Comparison
     { 
         public void Run()
         {
-
-            string[] input_files = System.IO.Directory.GetFiles(@"C:\Users\Thomas\source\repos\RE_Comparison\RE_Comparison\inputs\", "*.txt");
-            //string[] input_files = System.IO.Directory.GetFiles(@"C:\inputs\");
+            //custom directory option
+            //string[] input_files = System.IO.Directory.GetFiles(@"C:\Users\Thomas\source\repos\RE_Comparison\RE_Comparison\inputs\", "*.txt");
+            string[] input_files = System.IO.Directory.GetFiles(@"C:\inputs\", "*.txt");
 
             for (int i = 0; i < input_files.Length; i++)
             {
@@ -77,8 +77,8 @@ namespace RE_Comparison
                 output.TrimEnd(',');
                 output += '\n';
             }
-            System.IO.File.WriteAllText(@"C:\Users\Thomas\source\repos\RE_Comparison\RE_Comparison\outputs\" + output_name + ".txt", output);
-            //System.IO.File.WriteAllText(@"C:\outputs\" + output_name + ".txt", output);
+            //System.IO.File.WriteAllText(@"C:\Users\Thomas\source\repos\RE_Comparison\RE_Comparison\outputs\" + output_name + ".txt", output);
+            System.IO.File.WriteAllText(@"C:\outputs\" + output_name + ".txt", output);
         }
     }
 }
